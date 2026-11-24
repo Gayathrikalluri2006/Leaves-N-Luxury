@@ -1,0 +1,17 @@
+{
+  "name": "leaves-n-luxury",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "start": "vite --host 127.0.0.1"
+  },
+  "dependencies": {
+    "gsap": "3.12.5",
+    "three": "0.160.0"
+  },
+  "devDependencies": {
+    "vite": "^6.0.0"
+  }
+}

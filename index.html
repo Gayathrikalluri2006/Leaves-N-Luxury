@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#030407">
+  <meta name="description" content="Leaves n Luxury is a curated guide to distinctive hotels, private stays and supercar experiences in Hyderabad, India.">
+  <title>Leaves n Luxury — Hyderabad Hotel Collection</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=DM+Mono:wght@400;500&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "./node_modules/three/build/three.module.js",
+        "three/addons/": "./node_modules/three/examples/jsm/",
+        "gsap": "./node_modules/gsap/index.js"
+      }
+    }
+  </script>
+  <script type="module" src="script.js"></script>
+</head>
+<body data-page="opening">
+  <div class="top-laser" aria-hidden="true"><span id="topLaserFill"></span></div>
+
+  <header class="hud-header">
+    <a class="brand-lockup" href="#top" data-page-link="cover" aria-label="Leaves n Luxury, back to cover">
+      <span class="brand-glyph">L</span><span>LEAVES N LUXURY <small>// HYDERABAD</small></span>
+    </a>
+    <span class="live-coordinates">17.4126° N <i>/</i> 78.4392° E</span>
+    <nav class="hud-nav" aria-label="Experience navigation">
+      <a href="#page-architecture" data-page-link="architecture"><b>01.</b> ESTATE</a>
+      <a href="#page-suites" data-page-link="suites"><b>02.</b> SUITES</a>
+      <a href="#page-hotels" data-page-link="hotels"><b>03.</b> HYDERABAD HOTELS</a>
+      <a href="#page-fleet" data-page-link="fleet"><b>04.</b> MOTOR VAULT</a>
+      <a href="#page-concierge" data-page-link="concierge"><b>05.</b> CONCIERGE</a>
+      <button class="reserve-trigger" type="button" data-reserve="Leaves n Luxury — Hyderabad hotel collection">RESERVE <span>↗</span></button>
+    </nav>
+    <button class="mobile-menu" type="button" aria-expanded="false" aria-label="Open navigation"><span></span><span></span></button>
+  </header>
+
+  <aside class="altimeter" aria-label="Interactive building elevation">
+    <span class="altimeter-title">ALTITUDE / FT</span>
+    <div class="altimeter-scale" aria-hidden="true"><i id="altimeterFill"></i></div>
+    <span id="altimeterValue" class="altimeter-value">540 FT</span>
+    <div class="altimeter-levels">
+      <button type="button" data-portal="42" aria-label="Go to Level 42 Infinity Pool">L42</button>
+      <button type="button" data-portal="38" aria-label="Go to Level 38 Royal Penthouse">L38</button>
+      <button type="button" data-portal="24" aria-label="Go to Level 24 Sky Conservatory">L24</button>
+      <button type="button" data-portal="4" aria-label="Go to Level 04 Basalt Spa">L04</button>
+      <button type="button" data-portal="1" aria-label="Go to Level 01 Grand Atrium">L01</button>
+      <button type="button" data-portal="b2" aria-label="Go to Basement 2 Supercar Vault">B2</button>
+    </div>
+  </aside>
+
+  <details class="chapter-rail" id="chapterRail">
+    <summary class="chapter-rail-toggle">
+      <span class="chapter-rail-copy"><small>EXPLORE CHAPTERS</small><strong id="chapterRailCurrent">THE ARRIVAL</strong></span>
+      <span class="chapter-rail-chevron" aria-hidden="true">+</span>
+    </summary>
+    <nav class="chapter-rail-menu" aria-label="Explore the Leaves n Luxury experience">
+      <span class="chapter-rail-title">CHOOSE YOUR CHAPTER</span>
+      <button type="button" data-page-link="cover" aria-current="page"><span>THE ARRIVAL</span></button>
+      <button type="button" data-page-link="philosophy"><span>THE HOUSE</span></button>
+      <button type="button" data-page-link="architecture"><span>THE ESTATE</span></button>
+      <button type="button" data-page-link="suites"><span>PRIVATE SUITES</span></button>
+      <button type="button" data-page-link="hotels"><span>HYDERABAD HOTELS</span></button>
+      <button type="button" data-page-link="fleet"><span>THE MOTOR VAULT</span></button>
+      <button type="button" data-page-link="concierge"><span>PRIVATE CONCIERGE</span></button>
+    </nav>
+  </details>
+  <div class="chapter-turn" aria-label="Chapter navigation">
+    <span id="chapterReadout">CHAPTER 01 / 07</span>
+    <button type="button" id="previousChapter" aria-label="Previous chapter">←</button>
+    <button type="button" id="nextChapter" aria-label="Next chapter">→</button>
+  </div>
+  <div class="chapter-fracture" id="chapterFracture" aria-hidden="true">
+    <div class="chapter-shutter shutter-left"><span>THE NIZAM SKY &amp; PALACE</span></div>
+    <div class="chapter-shutter shutter-right"><span>HYDERABAD — 17.4126° N</span></div>
+    <i class="chapter-laser"></i>
+  </div>
+
+  <main id="top">
+    <section id="scrollHero" class="scroll-hero" data-page-panel="cover" aria-label="Leaves n Luxury arrival chapter">
+      <div class="world-stage">
+        <canvas id="worldCanvas" aria-label="Procedural 3D Hyderabad skyline, hotel tower, infinity pool and private supercar"></canvas>
+        <div class="world-grade" aria-hidden="true"></div>
+        <div class="world-vignette" aria-hidden="true"></div>
+        <div class="world-grain" aria-hidden="true"></div>
+
+        <div class="scene-readout"><span id="sceneCounter">SCENE 01 / 06</span><span id="sceneName">THE MIDNIGHT APPROACH</span><i></i><span>HYDERABAD, INDIA</span></div>
+        <div class="scene-coordinate">17°24′45.4″N<br>78°26′21.1″E</div>
+
+        <article class="story-beat beat-1 active" data-beat="0">
+          <p class="eyebrow"><span></span> BANJARA HILLS × HITEC CITY</p>
+          <h1>THE CITY<br>IS ONLY THE<br><em>BEGINNING.</em></h1>
+          <p class="story-copy">A private world rises above Hyderabad: sculpted Deccan stone, a 42-storey glass silhouette, and a skyline that belongs to you.</p>
+          <button class="story-action" type="button" data-page-link="philosophy">OPEN THE ESTATE BOOK <b>↗</b></button>
+        </article>
+        <article class="story-beat beat-2" data-beat="1">
+          <p class="eyebrow"><span></span> A NEW HYDERABAD LANDMARK</p>
+          <h2>42 FLOORS.<br><em>ZERO</em> DISTANCE.</h2>
+          <p class="story-copy">A private vertical estate shaped around stillness, discretion, and uninterrupted views of the Pearl City.</p>
+        </article>
+        <article class="story-beat beat-3" data-beat="2">
+          <p class="eyebrow"><span></span> LEVEL 01 — THE GRAND ARRIVAL</p>
+          <h2>ARRIVE<br>WITHOUT<br><em>ANNOUNCING.</em></h2>
+          <p class="story-copy">A triple-height Nizam atrium, private biometric elevators and a dedicated royal concierge.</p>
+        </article>
+        <article class="story-beat beat-4" data-beat="3">
+          <p class="eyebrow"><span></span> LEVEL 24 — GOLCONDA CONSERVATORY</p>
+          <h2>DINNER, SET<br>AGAINST THE<br><em>HORIZON.</em></h2>
+          <p class="story-copy">An intimate chef’s table and glass conservatory, suspended above the lights of Hyderabad.</p>
+        </article>
+        <article class="story-beat beat-5" data-beat="4">
+          <p class="eyebrow"><span></span> LEVEL 42 — 500 FEET ABOVE THE CITY</p>
+          <h2>THE EDGE<br>IS ONLY A<br><em>BEGINNING.</em></h2>
+          <p class="story-copy">Swim beyond the tower in a cantilevered, glass-bottom infinity pool. The sky has no other side.</p>
+        </article>
+        <article class="story-beat beat-6" data-beat="5">
+          <p class="eyebrow"><span></span> B2 — THE PRIVATE MOTOR VAULT</p>
+          <h2>YOUR NIGHT.<br>YOUR <em>LINE.</em></h2>
+          <p class="story-copy">Bentley, Lamborghini or Rolls-Royce. The Outer Ring Road, after midnight, all yours.</p>
+          <button type="button" class="story-action" data-portal="b2">DESCEND TO THE MOTOR VAULT <b>↘</b></button>
+        </article>
+
+        <div class="world-footer"><span>SELECT A CHAPTER TO ENTER THE ESTATE</span><span>42° / PRIVATE BY DESIGN</span></div>
+
+        <div id="split-curtain-stage" class="split-curtain-stage" aria-label="Interactive architectural floor matrix">
+          <div class="blueprint-world" id="blueprintWorld">
+            <div class="blueprint-heading"><span>THE NIZAM SKY / CUTAWAY INDEX</span><strong>SELECT YOUR<br>ALTITUDE.</strong><i>42° 00′ / PRIVATE ESTATE</i></div>
+            <div class="blueprint-grid">
+              <button type="button" class="blueprint-portal" data-portal="42"><span>42</span><i>INFINITY POOL<br>&amp; HELIPAD</i><b>540 FT <em>↗</em></b></button>
+              <button type="button" class="blueprint-portal" data-portal="38"><span>38</span><i>THE NIZAM<br>ROYAL PENTHOUSE</i><b>490 FT <em>↗</em></b></button>
+              <button type="button" class="blueprint-portal" data-portal="24"><span>24</span><i>GOLCONDA SKY<br>CONSERVATORY</i><b>310 FT <em>↗</em></b></button>
+              <button type="button" class="blueprint-portal" data-portal="4"><span>04</span><i>BASALT HAMMAM<br>&amp; THERMAL SPA</i><b>50 FT <em>↗</em></b></button>
+              <button type="button" class="blueprint-portal" data-portal="1"><span>01</span><i>GRAND NIZAM<br>ATRIUM</i><b>12 FT <em>↗</em></b></button>
+              <button type="button" class="blueprint-portal" data-portal="b2"><span>B2</span><i>SUPERCAR VAULT<br>&amp; ORR DEPARTURE</i><b>−24 FT <em>↗</em></b></button>
+            </div>
+            <div class="blueprint-foot"><span>42 STOREYS / 6 PRIVATE DESTINATIONS</span><span>CLICK A LEVEL TO WARP THROUGH THE FACADE</span></div>
+          </div>
+          <div class="curtain curtain-left" aria-hidden="true"><span>THE NIZAM SKY &amp; PALACE</span></div>
+          <div class="curtain curtain-right" aria-hidden="true"><span>HYDERABAD — 17.4126° N</span></div>
+          <div class="fracture-seam" aria-hidden="true"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="ascent" class="manifesto-section chapter-panel" data-page-panel="philosophy" aria-label="The House philosophy" hidden>
+      <div class="manifesto-kicker"><span>THE HOUSE PHILOSOPHY</span><span>01 — 03</span></div>
+      <p class="manifesto"><span id="manifestoText"></span><i class="type-cursor">|</i></p>
+      <p class="manifesto-foot">NOT A HOTEL. A PRIVATE SKY ADDRESS.</p>
+    </section>
+
+    <section class="estate-section chapter-panel" id="estate" data-page-panel="architecture" aria-label="The vertical estate" hidden>
+      <header class="section-header">
+        <p class="eyebrow"><span></span> THE VERTICAL ESTATE / STRUCTURE 042</p>
+        <h2>AN ENTIRE<br>WORLD, <em>IN SECTION.</em></h2>
+        <p>Every level is a destination. Choose a floor below and take the camera directly through its glass envelope.</p>
+      </header>
+      <div class="estate-grid">
+        <div class="estate-visual">
+          <div class="estate-blueprint-label"><span>ORTHOGRAPHIC CUTAWAY</span><span>1:420 / DECCAN LIMESTONE + LOW-IRON GLASS</span></div>
+          <div class="estate-stack" aria-hidden="true">
+            <i class="estate-wing"></i><div class="estate-core"></div>
+            <span class="estate-floor-marker marker-roof">42 <b>SKY / HELIPAD</b></span>
+            <span class="estate-floor-marker marker-penthouse">38 <b>ROYAL RESIDENCES</b></span>
+            <span class="estate-floor-marker marker-dining">24 <b>GOLCONDA</b></span>
+            <span class="estate-floor-marker marker-spa">04 <b>HAMMAM</b></span>
+            <span class="estate-floor-marker marker-arrival">01 <b>GRAND ARRIVAL</b></span>
+            <span class="estate-floor-marker marker-vault">B2 <b>MOTOR VAULT</b></span>
+            <div class="estate-floor-lines"></div>
+          </div>
+          <div class="estate-dimensions"><span>160 M / 540 FT</span><i></i><span>42 LEVELS + 2 BELOW GRADE</span></div>
+          <p class="estate-visual-caption">GLASS CURTAIN WALL / CUTAWAY SHOWING PRIVATE INTERIORS</p>
+        </div>
+        <div class="estate-info">
+          <div class="estate-current"><span id="activeFloorLabel">LEVEL 42 — SKY DECK</span><span id="activeFloorNumber">01 / 06</span></div>
+          <h3 id="activeFloorTitle">The horizon,<br>made private.</h3>
+          <p id="activeFloorCopy">A 14-metre cantilevered infinity pool meets a private helipad, both held above the midnight skyline.</p>
+          <dl class="spec-list">
+            <div><dt>ELEVATION</dt><dd id="specElevation">540 FT / 165 M</dd></div>
+            <div><dt>FLOOR AREA</dt><dd id="specArea">4,200 SQ.FT</dd></div>
+            <div><dt>MATERIAL</dt><dd id="specMaterial">LOW-IRON GLASS / BRONZE</dd></div>
+            <div><dt>EXPERIENCE</dt><dd id="specTariff">₹ 1,85,000 / NIGHT</dd></div>
+          </dl>
+          <div class="floor-portals" role="group" aria-label="Warp to a NIZAM SKY destination">
+            <button type="button" class="floor-portal active" data-portal="42"><span>42</span><i>INFINITY POOL</i><b>↗</b></button>
+            <button type="button" class="floor-portal" data-portal="38"><span>38</span><i>ROYAL PENTHOUSE</i><b>↗</b></button>
+            <button type="button" class="floor-portal" data-portal="24"><span>24</span><i>SKY CONSERVATORY</i><b>↗</b></button>
+            <button type="button" class="floor-portal" data-portal="4"><span>04</span><i>BASALT SPA</i><b>↗</b></button>
+            <button type="button" class="floor-portal" data-portal="1"><span>01</span><i>GRAND ATRIUM</i><b>↗</b></button>
+            <button type="button" class="floor-portal" data-portal="b2"><span>B2</span><i>SUPERCAR VAULT</i><b>↗</b></button>
+          </div>
+          <button type="button" class="button button-outline" data-reserve="Level 42 — Infinity Pool">RESERVE THIS ALTITUDE <span>↗</span></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="suite-section chapter-panel" id="suites" data-page-panel="suites" aria-label="Private suites" hidden>
+      <div class="suite-copy">
+        <p class="eyebrow"><span></span> CHAPTER 04 / PRIVATE RESIDENCES</p>
+        <h2>THE CITY<br>FALLS <em>AWAY.</em></h2>
+        <p>Beyond the glass, a quieter Hyderabad. Full-floor sanctuaries shaped in Deccan stone, Italian travertine and warm, private light.</p>
+        <div class="suite-details">
+          <span><b>6,800</b><small>SQ.FT / PRIVATE RESIDENCE</small></span>
+          <span><b>360°</b><small>HUSSAIN SAGAR TO GOLCONDA</small></span>
+          <span><b>38—40</b><small>DEDICATED SKY FLOORS</small></span>
+        </div>
+        <div class="suite-actions">
+          <button class="button button-outline" type="button" data-portal="38">ENTER THE ROYAL PENTHOUSE <span>↗</span></button>
+          <button class="text-link" type="button" data-page-link="fleet">CONTINUE TO THE MOTOR VAULT <span>→</span></button>
+        </div>
+      </div>
+      <div class="suite-art" aria-hidden="true">
+        <div class="suite-art-orbit"></div>
+        <div class="suite-art-window"><span>HUSSAIN SAGAR / 23:47</span><i></i><b>THE NIZAM<br>ROYAL RESIDENCE</b></div>
+        <div class="suite-art-material"></div>
+        <span class="suite-art-index">38° / 500 FT ABOVE THE DECCAN</span>
+      </div>
+    </section>
+
+    <section class="hotels-section chapter-panel" id="hotels" data-page-panel="hotels" aria-label="Hyderabad hotel directory" aria-hidden="true" inert hidden>
+      <header class="hotels-heading">
+        <div>
+          <p class="eyebrow"><span></span> THE DECCAN / AN INDEPENDENT CITY ATLAS</p>
+          <h2>HYDERABAD,<br><em>IN GOOD COMPANY.</em></h2>
+        </div>
+        <div class="hotel-filters">
+          <label class="sr-only" for="hotelSearch">Search Hyderabad hotels</label>
+          <input id="hotelSearch" type="search" autocomplete="off" placeholder="SEARCH HOTELS OR NEIGHBOURHOODS">
+          <label class="sr-only" for="hotelArea">Filter hotels by neighbourhood</label>
+          <select id="hotelArea">
+            <option value="all">ALL NEIGHBOURHOODS</option>
+            <option value="Banjara Hills">BANJARA HILLS</option>
+            <option value="HITEC City">HITEC CITY</option>
+            <option value="Gachibowli">GACHIBOWLI</option>
+            <option value="Begumpet">BEGUMPET</option>
+            <option value="Old City">OLD CITY</option>
+            <option value="Other Hyderabad">OTHER HYDERABAD</option>
+          </select>
+          <span class="hotel-count" id="hotelCount" aria-live="polite">25 LISTINGS</span>
+        </div>
+      </header>
+      <div class="hotel-grid" id="hotelGrid" role="list" aria-live="polite"></div>
+      <div class="hotel-directory-footer">
+        <p>3D views use credited property photos with procedural depth; they are visual approximations, not measured replicas. Representative photos are labelled. <a href="assets/image-credits.txt" target="_blank" rel="noopener noreferrer">IMAGE & MODEL CREDITS ↗</a></p>
+        <div class="hotel-pagination" aria-label="Hotel results pages">
+          <button type="button" id="hotelPrevious" aria-label="Previous hotels">←</button>
+          <span id="hotelPageStatus">01 / 03</span>
+          <button type="button" id="hotelNext" aria-label="Next hotels">→</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="experience-section chapter-panel" id="drive" data-page-panel="fleet" aria-label="The private motor vault" hidden>
+      <div class="fleet-showroom">
+        <header class="fleet-heading">
+          <div>
+            <p class="eyebrow"><span></span> THE NIGHT IS YOURS / THE PRIVATE MOTOR VAULT</p>
+            <h2>TWENTY-ONE WAYS<br>TO <em>DISAPPEAR.</em></h2>
+          </div>
+          <p>Choose a machine to fill the screen with its interactive 360° model. Concise specs and stay pricing float over the scene.</p>
+        </header>
+        <div class="showroom-main">
+          <div class="vehicle-stage" id="vehicleStage" aria-label="Interactive three-dimensional vehicle viewer">
+            <img id="vehiclePhoto" class="vehicle-photo" src="" alt="">
+            <canvas id="vehicleCanvas" aria-label="Interactive 3D vehicle model; move or drag to rotate"></canvas>
+            <iframe id="vehicleModelFrame" class="vehicle-model-frame" title="Selected car, interactive 3D model" allow="autoplay; fullscreen" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            <div class="vehicle-stage-shade" aria-hidden="true"></div>
+            <span class="vehicle-photo-label">REAL PHOTOGRAPH</span>
+            <span class="vehicle-orbit-label" id="vehicleOrbitLabel">360° MODEL / DRAG TO ORBIT</span>
+            <a class="vehicle-model-credit" id="vehicleModelCredit" href="#" target="_blank" rel="noopener noreferrer"></a>
+            <a class="vehicle-photo-credit" id="vehiclePhotoCredit" href="#" target="_blank" rel="noopener noreferrer"></a>
+          </div>
+          <div class="vehicle-details">
+            <p class="vehicle-class" id="vehicleClass">01 / GRAND TOURER</p>
+            <h3 id="vehicleTitle">BENTLEY CONTINENTAL GT</h3>
+            <p class="vehicle-description" id="vehicleDescription">The long-distance grand tourer, composed for a private Hyderabad arrival and the open sweep of the Outer Ring Road.</p>
+            <div class="vehicle-specs">
+              <span><b id="vehiclePower">V8</b><small>POWERTRAIN</small></span>
+              <span><b id="vehicleType">GRAND TOURER</b><small>BODY</small></span>
+              <span><b>ON REQUEST</b><small>CHAUFFEUR / SELF-DRIVE</small></span>
+            </div>
+            <div class="package-picker" role="group" aria-label="Choose a stay and drive package">
+              <button type="button" class="fleet-package active" data-package="weekend" aria-pressed="true">
+                <span>01 / TWO NIGHTS</span><strong>THE NIZAM ROYAL WEEKEND</strong><b>₹ 4,85,000</b>
+              </button>
+              <button type="button" class="fleet-package" data-package="residency" aria-pressed="false">
+                <span>02 / THREE NIGHTS</span><strong>HITEC SKY RESIDENCY</strong><b>₹ 2,40,000</b>
+              </button>
+              <button type="button" class="fleet-package" data-package="midnight" aria-pressed="false">
+                <span>03 / ONE NIGHT</span><strong>MIDNIGHT ORR ESCAPE</strong><b>₹ 6,75,000</b>
+              </button>
+            </div>
+            <div class="fleet-summary">
+              <span id="fleetSelection">BENTLEY CONTINENTAL GT — THE NIZAM ROYAL WEEKEND</span>
+              <span class="fleet-total">PACKAGE FROM <b id="fleetTotal">₹ 4,85,000</b></span>
+              <button class="button button-gold" id="fleetReserve" type="button" data-reserve="Bentley Continental GT — The Nizam Royal Weekend">REQUEST THIS ARRIVAL <span>↗</span></button>
+            </div>
+          </div>
+        </div>
+        <div class="vehicle-picker">
+          <div class="vehicle-picker-heading"><span>THE MOTOR COLLECTION / <b id="vehicleCount">01 — 21</b></span><span><a href="assets/image-credits.txt" target="_blank" rel="noopener noreferrer">IMAGE & MODEL CREDITS ↗</a> / ILLUSTRATIVE SELECTION</span></div>
+          <button class="vehicle-scroll vehicle-scroll-left" id="vehiclePrevious" type="button" aria-label="Scroll vehicle collection left">←</button>
+          <div class="vehicle-picker-viewport" id="vehiclePickerViewport">
+            <div class="vehicle-picker-track" id="vehicleGrid" role="list"></div>
+          </div>
+          <button class="vehicle-scroll vehicle-scroll-right" id="vehicleNext" type="button" aria-label="Scroll vehicle collection right">→</button>
+        </div>
+      </div>
+      <button type="button" class="orr-link" data-portal="orr">↗ &nbsp; WARP TO THE OUTER RING ROAD</button>
+    </section>
+
+    <section class="closing-section chapter-panel" id="vault" data-page-panel="concierge" hidden>
+      <p class="eyebrow"><span></span> A PRIVATE CONCIERGE, ALWAYS WITHIN REACH</p>
+      <h2>THE SKY IS<br><em>ALREADY YOURS.</em></h2>
+      <button type="button" class="button button-light" data-reserve="Leaves n Luxury — Hyderabad hotel collection">REQUEST A PRIVATE ARRIVAL <span>↗</span></button>
+    </section>
+  </main>
+
+  <section class="opening-screen is-current" id="openingScreen" aria-label="Welcome to Leaves n Luxury">
+    <div class="opening-orbit opening-orbit-one" aria-hidden="true"></div>
+    <div class="opening-orbit opening-orbit-two" aria-hidden="true"></div>
+    <div class="opening-monogram" aria-hidden="true">L</div>
+    <div class="opening-content">
+      <p class="eyebrow"><span></span> HYDERABAD / 17.4126° N, 78.4392° E</p>
+      <h1>LEAVES N<br><em>LUXURY</em></h1>
+      <p class="opening-quote">“A city of a thousand nights.<br>A stay above the expected.”</p>
+      <button class="opening-enter" id="enterExperience" type="button">ENTER THE EXPERIENCE <span>↗</span></button>
+      <span class="opening-foot">A CURATED COLLECTION OF HYDERABAD STAYS</span>
+    </div>
+    <span class="opening-index">ESTATE / 042<br>HYDERABAD, INDIA</span>
+  </section>
+
+  <section class="hotel-model-overlay" id="hotelModelOverlay" role="dialog" aria-modal="true" aria-labelledby="hotelModelTitle" hidden>
+    <div class="hotel-model-stage" id="hotelModelCanvasHost"></div>
+    <div class="hotel-model-shade" aria-hidden="true"></div>
+    <header class="hotel-model-hud">
+      <p class="eyebrow"><span></span> INTERACTIVE ARCHITECTURE / 360°</p>
+      <h2 id="hotelModelTitle">HYDERABAD HOTEL</h2>
+      <p id="hotelModelSubtitle"></p>
+      <small id="hotelModelDisclosure">PROPERTY PHOTO + PROCEDURAL 3D / APPROXIMATION, NOT A VERIFIED SURVEY</small>
+      <a id="hotelModelVisit" href="#" target="_blank" rel="noopener noreferrer" hidden>OFFICIAL HOTEL ↗</a>
+    </header>
+    <span class="hotel-model-orbit-hint">DRAG TO ORBIT / SCROLL TO ZOOM</span>
+    <button class="hotel-model-close" id="hotelModelClose" type="button" aria-label="Close hotel 3D model">×</button>
+  </section>
+
+  <aside id="specDrawer" class="spec-drawer" aria-hidden="true" inert aria-labelledby="drawerTitle">
+    <button type="button" class="drawer-close" aria-label="Close architectural specifications">×</button>
+    <p class="eyebrow"><span></span> CAMERA PORTAL / SELECTED DESTINATION</p>
+    <span class="drawer-code" id="drawerCode">L42 / 165 M</span>
+    <h2 id="drawerTitle">THE INFINITY<br>WATERLINE.</h2>
+    <p id="drawerDescription">A 14-metre glass-bottom pool held beyond the building line. Heated to 29°C, with an open view over Hyderabad’s night horizon.</p>
+    <div class="drawer-metrics"><span>ELEVATION<strong id="drawerElevation">540 FT</strong></span><span>AREA<strong id="drawerArea">4,200 SQ.FT</strong></span><span>FROM<strong id="drawerTariff">₹ 1,85,000 / NIGHT</strong></span></div>
+    <button class="button button-outline" type="button" id="zoomOutButton">ESC // ZOOM OUT TO FULL TOWER</button>
+    <button class="button button-gold drawer-reserve" type="button" data-reserve="The Nizam Sky & Palace private stay">RESERVE THIS EXPERIENCE <span>↗</span></button>
+  </aside>
+
+  <footer class="site-footer">
+    <a class="brand-lockup" href="#top" data-page-link="cover"><span class="brand-glyph">L</span><span>LEAVES N LUXURY <small>// HYDERABAD</small></span></a>
+    <p>17.4126° N, 78.4392° E<br><span>BANJARA HILLS — HYDERABAD, INDIA</span></p>
+    <nav aria-label="Footer navigation"><a href="#page-architecture" data-page-link="architecture">THE ESTATE</a><a href="#page-hotels" data-page-link="hotels">HYDERABAD HOTELS</a><a href="#page-fleet" data-page-link="fleet">THE MOTOR VAULT</a><button type="button" data-reserve="Leaves n Luxury — Hyderabad hotel collection">RESERVATIONS</button></nav>
+    <small>© 2026 LEAVES N LUXURY<br>CURATED STAYS IN HYDERABAD, INDIA.</small>
+  </footer>
+
+  <div class="modal-backdrop" id="reservationModal" hidden>
+    <section class="reservation-modal" role="dialog" aria-modal="true" aria-labelledby="reservationTitle">
+      <button type="button" class="modal-close" aria-label="Close reservation">×</button>
+      <div class="reservation-form-view">
+        <p class="eyebrow"><span></span> THE PRIVATE CONCIERGE</p>
+        <h2 id="reservationTitle">YOUR ARRIVAL,<br><em>CONSIDERED.</em></h2>
+        <p>Share your preferred arrival details. Our Hyderabad concierge will curate the rest.</p>
+        <form id="reservationForm">
+          <label>GUEST NAME<input name="guestName" autocomplete="name" required placeholder="Full name"></label>
+          <label>PHONE NUMBER<div class="phone-input"><span>+91</span><input name="phone" type="tel" autocomplete="tel-national" inputmode="tel" pattern="[0-9\s\-]{10,14}" required placeholder="98765 43210"></div></label>
+          <label>CHECK-IN DATE<input name="checkIn" type="date" required></label>
+          <label>ARRIVAL MODE<select name="arrival" required><option value="" selected disabled>Choose your arrival</option><option>RGIA private helipad</option><option>Rolls-Royce chauffeur pickup</option><option>Self-drive valet</option></select></label>
+          <label class="selection-input">YOUR PRIVATE ARRANGEMENT<input id="reservationSelection" name="selection" readonly></label>
+          <button class="button button-gold" type="submit">REQUEST A PRIVATE RESERVATION <span>↗</span></button>
+        </form>
+      </div>
+      <div class="reservation-confirmation" hidden><span class="confirmation-seal">N</span><p class="eyebrow">YOUR REQUEST IS WITH THE CONCIERGE</p><h2>WE’LL BE<br><em>EXPECTING YOU.</em></h2><p class="confirmation-copy"></p><button class="button button-outline confirmation-close" type="button">RETURN TO THE ESTATE <span>↗</span></button></div>
+    </section>
+  </div>
+</body>
+</html>
